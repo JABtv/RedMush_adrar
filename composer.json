@@ -1,0 +1,15 @@
+{
+    "name": "jab/red-mush_adrar",
+    "autoload": {
+        "psr-4": {
+            "Jab\\RedMushAdrar\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "JABtv",
+            "email": "tom.andres31000@gmail.com"
+        }
+    ],
+    "require": {}
+}
