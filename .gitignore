@@ -1,0 +1,63 @@
+# Fichiers de configuration sensibles
+config/database.php
+config/secrets.php
+.env
+.env.local
+.env.production
+
+# Fichiers de logs
+*.log
+logs/
+log/
+
+# Dossiers de cache
+cache/
+tmp/
+temp/
+
+# Fichiers uploads (selon ton projet)
+uploads/
+public/uploads/
+images/uploads/
+
+# Fichiers système
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE et éditeurs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Composer
+/vendor/
+composer.phar
+composer.lock
+
+# Node.js 
+node_modules/
+pnpm-debug.log*
+pnpm-lock.yaml
+
+
+# Build et dist
+build/
+dist/
+
+# Fichiers de sauvegarde
+*.backup
+*.bak
+*.old
+
+# Fichiers de session PHP
+sessions/
+
+# Documentation générée
+docs/_build/

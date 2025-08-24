@@ -1,0 +1,5 @@
+RewriteEngine On
+DirectoryIndex public/index.php
+
+# Rediriger la racine
+RewriteRule ^$ public/index.php [L]
