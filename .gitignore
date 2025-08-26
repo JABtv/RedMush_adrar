@@ -15,7 +15,7 @@ cache/
 tmp/
 temp/
 
-# Fichiers uploads (selon ton projet)
+# Fichiers uploads
 uploads/
 public/uploads/
 images/uploads/
