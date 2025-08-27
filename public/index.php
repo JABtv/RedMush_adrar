@@ -70,10 +70,16 @@ $router->map( 'GET', '/user/[i:id]/', function( $id ) {
 // match current request url
 $match = $router->match();
 
+if ($match !== null){
+	require_once __DIR__ . '/../src/app/Views/templates/header.php';
+
 // call closure or throw 404 status
 if( is_array($match) && is_callable( $match['target'] ) ) {
 	call_user_func_array( $match['target'], $match['params'] );
 } else {
 	// no route was matched
 	header( $_SERVER["SERVER_PROTOCOL"] . ' 404 Not Found | Sad T_T');
+}
+
+require_once __DIR__ . '/../src/app/Views/templates/footer.php';
 }
