@@ -2,4 +2,9 @@ RewriteEngine On
 DirectoryIndex public/index.php
 
 # Rediriger la racine
-RewriteRule ^$ public/index.php [L]
+RewriteRule . public/index.php [L]
+
+# Rediriger toutes les autres requêtes sauf les fichiers existants
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ public/index.php [L]
