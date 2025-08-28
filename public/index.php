@@ -1,5 +1,7 @@
 <?php
 
+$title = "RedMush_adrar";
+
 require __DIR__ . '/../vendor/autoload.php';
 
 $router = new AltoRouter();
