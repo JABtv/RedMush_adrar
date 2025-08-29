@@ -5,7 +5,7 @@ $title = "RedMush_adrar";
 require __DIR__ . '/../vendor/autoload.php';
 
 $router = new AltoRouter();
-$router->setBasePath('/redmush_adrar');
+$router->setBasePath('/redmush');
 
 // map homepage
 $router->map( 'GET', '/', function() {
@@ -75,10 +75,10 @@ $match = $router->match();
 if ($match !== null){
 	require_once __DIR__ . '/../src/app/Views/templates/header.php';
 
-// call closure or throw 404 status
-if( is_array($match) && is_callable( $match['target'] ) ) {
-	call_user_func_array( $match['target'], $match['params'] );
-} else {
+	// call closure or throw 404 status
+	if( is_array($match) && is_callable( $match['target'] ) ) {
+		call_user_func_array( $match['target'], $match['params'] );
+	} else {
 	// no route was matched
 	header( $_SERVER["SERVER_PROTOCOL"] . ' 404 Not Found | Sad T_T');
 }
