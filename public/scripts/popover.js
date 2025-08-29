@@ -36,5 +36,20 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     }
+
+    const btnSearch = document.getElementById('btnSearch');
+    const popoverSearch = document.getElementById('btnSearchPop');
+    if (btnSearch && popoverSearch) {
+        btnSearch.addEventListener('click', function (e) {
+            e.stopPropagation();
+            popoverSearch.classList.toggle('hidden');
+        });
+        // Masquer le popover si on clique ailleurs
+        document.addEventListener('click', function (e) {
+            if (!popoverSearch.contains(e.target) && e.target !== btnSearch) {
+                popoverSearch.classList.add('hidden');
+            }
+        });
+    }
 });
 

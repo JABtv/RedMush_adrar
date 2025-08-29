@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme{
+    --color-redmush: #D71C10;
+}
+
 .text-red{
     color: #D71C10;
 }
@@ -47,4 +51,9 @@ body{
 
 .btn:active{
     background-color: black;
+    border: 2px solid #D71C10;
+}
+
+#btnSearch::backdrop{
+    background-color: rgba(0, 0, 0, 0.5);
 }
