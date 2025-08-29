@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const btnPanier = document.getElementById('btnPanier');
     const popoverPanier = document.getElementById('btnPanierPop');
+    const btnClosePanier = document.getElementById('btnClosePanier');
     if (btnPanier && popoverPanier) {
         btnPanier.addEventListener('click', function (e) {
             e.stopPropagation();
@@ -28,5 +29,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 popoverPanier.classList.add('hidden');
             }
         });
+        if (btnClosePanier) {
+            btnClosePanier.addEventListener('click', function (e) {
+                e.stopPropagation();
+                popoverPanier.classList.add('hidden');
+            });
+        }
     }
 });
+

@@ -1,5 +1,5 @@
 <?php
-
+$nA = 2;
 $title = "RedMush_adrar";
 
 require __DIR__ . '/../vendor/autoload.php';
