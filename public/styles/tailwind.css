@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+.text-red{
+    color: #D71C10;
+}
+
 .oswald {
     font-family: "Oswald", sans-serif ;
     font-optical-sizing: auto ;
@@ -27,4 +31,20 @@ button{
 
 body{
     background-color: #f0f0f0;
+}
+
+.btn{
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+    padding: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.btn:hover{
+    background-color: #D71C10;
+}
+
+.btn:active{
+    background-color: black;
 }

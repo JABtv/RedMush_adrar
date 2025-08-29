@@ -14,5 +14,19 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-    // Tu peux dupliquer ce bloc pour PANIER, SEARCH, MENU
+
+    const btnPanier = document.getElementById('btnPanier');
+    const popoverPanier = document.getElementById('btnPanierPop');
+    if (btnPanier && popoverPanier) {
+        btnPanier.addEventListener('click', function (e) {
+            e.stopPropagation();
+            popoverPanier.classList.toggle('hidden');
+        });
+        // Masquer le popover si on clique ailleurs
+        document.addEventListener('click', function (e) {
+            if (!popoverPanier.contains(e.target) && e.target !== btnPanier) {
+                popoverPanier.classList.add('hidden');
+            }
+        });
+    }
 });
