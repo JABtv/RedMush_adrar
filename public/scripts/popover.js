@@ -1,55 +1,42 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Popover USER
-    const btnUser = document.getElementById('btnUser');
-    const popoverUser = document.getElementById('btnUserPop');
-    if (btnUser && popoverUser) {
-        btnUser.addEventListener('click', function (e) {
-            e.stopPropagation();
-            popoverUser.classList.toggle('hidden');
-        });
-        // Masquer le popover si on clique ailleurs
-        document.addEventListener('click', function (e) {
-            if (!popoverUser.contains(e.target) && e.target !== btnUser) {
-                popoverUser.classList.add('hidden');
-            }
-        });
-    }
+    // Gestion des popovers
+    const popovers = [
+        { btn: 'btnUser', pop: 'btnUserPop' },
+        { btn: 'btnPanier', pop: 'btnPanierPop', close: 'btnClosePanier' },
+        { btn: 'btnSearch', pop: 'btnSearchPop' },
+        { btn: 'btnMenu', pop: 'btnMenuPop', close: 'btnCloseMenu' }
+    ];
 
-    const btnPanier = document.getElementById('btnPanier');
-    const popoverPanier = document.getElementById('btnPanierPop');
-    const btnClosePanier = document.getElementById('btnClosePanier');
-    if (btnPanier && popoverPanier) {
-        btnPanier.addEventListener('click', function (e) {
-            e.stopPropagation();
-            popoverPanier.classList.toggle('hidden');
-        });
-        // Masquer le popover si on clique ailleurs
-        document.addEventListener('click', function (e) {
-            if (!popoverPanier.contains(e.target) && e.target !== btnPanier) {
-                popoverPanier.classList.add('hidden');
-            }
-        });
-        if (btnClosePanier) {
-            btnClosePanier.addEventListener('click', function (e) {
+    popovers.forEach(({ btn, pop, close }) => {
+        const btnEl = document.getElementById(btn);
+        const popEl = document.getElementById(pop);
+        const closeEl = close ? document.getElementById(close) : null;
+        if (btnEl && popEl) {
+            btnEl.addEventListener('click', function (e) {
                 e.stopPropagation();
-                popoverPanier.classList.add('hidden');
+                // Fermer tous les autres popovers
+                popovers.forEach(({ pop: otherPop }) => {
+                    if (otherPop !== pop) {
+                        const otherEl = document.getElementById(otherPop);
+                        if (otherEl) otherEl.classList.add('hidden');
+                    }
+                });
+                // Ouvrir/fermer celui-ci
+                popEl.classList.toggle('hidden');
             });
-        }
-    }
-
-    const btnSearch = document.getElementById('btnSearch');
-    const popoverSearch = document.getElementById('btnSearchPop');
-    if (btnSearch && popoverSearch) {
-        btnSearch.addEventListener('click', function (e) {
-            e.stopPropagation();
-            popoverSearch.classList.toggle('hidden');
-        });
-        // Masquer le popover si on clique ailleurs
-        document.addEventListener('click', function (e) {
-            if (!popoverSearch.contains(e.target) && e.target !== btnSearch) {
-                popoverSearch.classList.add('hidden');
+            // Masquer le popover si on clique ailleurs
+            document.addEventListener('click', function (e) {
+                if (!popEl.contains(e.target) && e.target !== btnEl) {
+                    popEl.classList.add('hidden');
+                }
+            });
+            if (closeEl) {
+                closeEl.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    popEl.classList.add('hidden');
+                });
             }
-        });
-    }
+        }
+    });
 });
 
