@@ -4,9 +4,24 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><?= $title ?></title>
-
-        <!-- Link CSS Perso. -->
-        <link rel="stylesheet" href="/redmush/public/styles/style.css">
+        <!-- Link Favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="public/assets/images/favicons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="public/assets/images/favicons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="public/assets/images/favicons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="public/assets/images/favicons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="public/assets/images/favicons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="public/assets/images/favicons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="public/assets/images/favicons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="public/assets/images/favicons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="public/assets/images/favicons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="public/assets/images/favicons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="public/assets/images/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="public/assets/images/favicons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="public/assets/images/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
 
         <!-- Link Tailwind -->
         <link rel="stylesheet" href="/redmush/public/styles/app.css">
@@ -17,23 +32,27 @@
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 
         <!-- Link Scrips Perso. -->
-        <script src=""></script>
+        <script src="public\scripts\popover.js" defer></script>
     </head>
     <body>
-    <header class="flex flex-col w-full sticky top-0 z-50">
+    <header class="flex flex-col w-full sticky top-0 z-50 border-b-2 border-black bg-white">
         <p class="flex items-center justify-center oswald bg-amber-400">/!\ SITE FACTIF /!\</p>
         <p class="flex items-center justify-center oswald bg-black text-white">FRAIS DE PORT OFFERT DES 80€</p>
         <nav class="flex flex-row justify-between items-center px-4">
+
             <section class="flex gap-4">
-                <button id="btnUser" popovertarget="btnUser"><a href="/user/12635">
+                <button id="btnUser" popovertarget="btnUser">
                     <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#000000"><path d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z"/></svg>
-                </a></button>
-                <div class="border-4 border-black" id="btnUser" popover>
-                    
+                </button>
+
+                <div class="border border-black flex fixed hidden justify-center items-center w-1/5 h-1/3 top-26 gap-4" id="btnUserPop" popover>
+                    <button class="border-2 bg-black text-white p-2 oswald hover:bg-red-600 active:bg-black">Connexion</button>
+                    <button class="border-2 bg-black text-white p-2 oswald hover:bg-red-600 active:bg-black">Inscription</button>
                 </div>
-                <button><a href="/panier">
+
+                <button>
                     <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#000000"><path d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Zm160-560h160q0-33-23.5-56.5T480-800q-33 0-56.5 23.5T400-720ZM240-160v-480 480Z"/></svg>
-                </a></button>
+                </button>
             </section>
             
                 <a href="#" class="flex items-center gap-2">
