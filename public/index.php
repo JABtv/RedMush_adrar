@@ -1,13 +1,15 @@
 <?php
+$nA = 2;
+$title = "RedMush_adrar";
 
 require __DIR__ . '/../vendor/autoload.php';
 
 $router = new AltoRouter();
-$router->setBasePath('/redmush_adrar');
+$router->setBasePath('/redmush');
 
 // map homepage
 $router->map( 'GET', '/', function() {
-	require __DIR__ . '/../src/app/Controllers/controller_acceuil.php';
+	require __DIR__ . '/../src/app/Controllers/controller_accueil.php';
 });
 
 $router->map( 'GET', '/connexion', function() {
@@ -70,10 +72,15 @@ $router->map( 'GET', '/user/[i:id]/', function( $id ) {
 // match current request url
 $match = $router->match();
 
-// call closure or throw 404 status
-if( is_array($match) && is_callable( $match['target'] ) ) {
-	call_user_func_array( $match['target'], $match['params'] );
-} else {
+if ($match !== null){
+	require_once __DIR__ . '/../src/app/Views/templates/header.php';
+
+	// call closure or throw 404 status
+	if( is_array($match) && is_callable( $match['target'] ) ) {
+		call_user_func_array( $match['target'], $match['params'] );
+	} else {
 	// no route was matched
 	header( $_SERVER["SERVER_PROTOCOL"] . ' 404 Not Found | Sad T_T');
+	}
+	require_once __DIR__ . '/../src/app/Views/templates/footer.php';
 }

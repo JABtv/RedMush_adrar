@@ -1,1 +1,87 @@
 @import "tailwindcss";
+
+@theme{
+    --color-redmush: #D71C10;
+}
+
+.text-red{
+    color: #D71C10;
+}
+
+.oswald {
+    font-family: "Oswald", sans-serif ;
+    font-optical-sizing: auto ;
+    font-weight: normal ;
+    font-style: normal ;
+}
+
+.oswald-bold {
+    font-family: "Oswald", sans-serif ;
+    font-optical-sizing: auto ;
+    font-weight: bold ;
+    font-style: normal ;
+}
+
+.oswald-light {
+    font-family: "Oswald", sans-serif ;
+    font-optical-sizing: auto ;
+    font-weight: lighter ;
+    font-style: normal ;
+}
+
+.noto-sans {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+}
+
+.noto-sans-bold {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+}
+
+.noto-sans-light {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: lighter;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+}
+
+
+button{
+    cursor: pointer;
+}
+
+body{
+    background-color: #f0f0f0;
+}
+
+.btn{
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+    padding: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.btn:hover{
+    background-color: #D71C10;
+}
+
+.btn:active{
+    background-color: black;
+    border: 2px solid #D71C10;
+}
+
+#btnSearch::backdrop{
+    background-color: rgba(0, 0, 0, 0.5);
+}
