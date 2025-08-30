@@ -9,7 +9,7 @@ $router->setBasePath('/redmush');
 
 // map homepage
 $router->map( 'GET', '/', function() {
-	require __DIR__ . '/../src/app/Controllers/controller_acceuil.php';
+	require __DIR__ . '/../src/app/Controllers/controller_accueil.php';
 });
 
 $router->map( 'GET', '/connexion', function() {
@@ -81,7 +81,6 @@ if ($match !== null){
 	} else {
 	// no route was matched
 	header( $_SERVER["SERVER_PROTOCOL"] . ' 404 Not Found | Sad T_T');
-}
-
-require_once __DIR__ . '/../src/app/Views/templates/footer.php';
+	}
+	require_once __DIR__ . '/../src/app/Views/templates/footer.php';
 }
