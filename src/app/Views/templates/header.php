@@ -49,7 +49,7 @@
 
                 <div class="border border-black flex fixed hidden justify-center items-center w-1/5 h-1/3 top-26 gap-4" id="btnUserPop" popover>
                     <button class="btn oswald">Connexion</button>
-                    <button class="btn oswald">Inscription</button>
+                    <button class="btn oswald"><a href="./inscription">Inscription</a></button>
                 </div>
 
                 <button id="btnPanier" popovertarget="btnPanier">
@@ -78,7 +78,7 @@
                 </section>
             </section>
             
-                <a href="#" class="flex items-center gap-2">
+                <a href="./" class="flex items-center gap-2">
                     <img src="public\assets\images\logoL.png" alt="Logo du site">
                     <h1 class="oswald-bold text-2xl">RedMush</h1>
                 </a>
@@ -114,35 +114,35 @@
                     <nav class="flex justify-end items-center text-2xl">
                         <ul class="flex flex-col gap-2 text-right">
                             <li>
-                                <a href="/redmush" class="oswald-bold">ACCUEIL</a>
+                                <a href="/" class="oswald-bold">ACCUEIL</a>
                             </li>
                             <hr class="my-2 text-gray-300">
                             <li>
-                                <a href="/redmush/homme" class="oswald-bold">HOMME</a>
+                                <a href="/homme" class="oswald-bold">HOMME</a>
                             </li>
                             <hr class="my-2 text-gray-300">
                             <li>
-                                <a href="/redmush/femme" class="oswald-bold">FEMME</a>
+                                <a href="/femme" class="oswald-bold">FEMME</a>
                             </li>
                             <hr class="my-2 text-gray-300">
                             <li>
-                                <a href="/redmush/enfant" class="oswald-bold">ENFANT</a>
+                                <a href="/enfant" class="oswald-bold">ENFANT</a>
                             </li>
                             <hr class="my-2 text-gray-300">
                             <li>
-                                <a href="/redmush/accessoires" class="oswald-bold">ACCESSOIRES</a>
+                                <a href="/accessoires" class="oswald-bold">ACCESSOIRES</a>
                             </li>
                             <hr class="my-2 text-gray-300">
                             <li>
-                                <a href="/redmush/nouveautes" class="oswald-bold">NOUVEAUTÉS</a>
+                                <a href="/nouveautes" class="oswald-bold">NOUVEAUTÉS</a>
                             </li>
                             <hr class="my-2 text-gray-300">
                             <li>
-                                <a href="/redmush/promotion" class="oswald-bold">PROMO</a>
+                                <a href="/promotion" class="oswald-bold">PROMO</a>
                             </li>
                             <hr class="my-2 text-gray-300">
                             <li>
-                                <a href="/redmush/capsule" class="oswald-bold">CAPSULE</a>
+                                <a href="/capsule" class="oswald-bold">CAPSULE</a>
                             </li>
                         </ul>
                     </nav>
