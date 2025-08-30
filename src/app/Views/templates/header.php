@@ -48,7 +48,7 @@
                 </button>
 
                 <div class="border border-black flex fixed hidden justify-center items-center w-1/5 h-1/3 top-26 gap-4" id="btnUserPop" popover>
-                    <button class="btn oswald">Connexion</button>
+                    <button class="btn oswald"><a href="./connexion">Connexion</a></button>
                     <button class="btn oswald"><a href="./inscription">Inscription</a></button>
                 </div>
 
