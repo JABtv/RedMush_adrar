@@ -29,7 +29,7 @@
         <!-- Link font Google -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 
         <!-- Link Scrips Perso. -->
         <script src="public\scripts\popover.js" defer></script>
@@ -101,7 +101,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
                 </button>
 
-                <section class="border border-black flex flex-col fixed top-0 right-0 p-4 h-full w-full  sm:w-1/3 lg:w-1/3" id="btnMenuPop" popover>
+                <section class="border border-black flex flex-col hidden fixed top-0 right-0 p-4 h-full w-full  sm:w-1/3 lg:w-1/3" id="btnMenuPop" popover>
                     <section class="flex justify-between items-center">
                         <h2 class="oswald-bold">MENU</h2>
                         <div class="flex">
