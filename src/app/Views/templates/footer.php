@@ -1,5 +1,5 @@
         <!-- Footer Mobile -->
-        <footer class="bg-black text-white bottom-0  w-dvw lg:hidden pb-2">
+        <footer class="bg-black text-white bottom-0 w-dvw lg:hidden pb-2">
             <nav class="items-center text-left text-2xl">
                 <ul class="flex flex-col gap-2 w-full">
                     <hr class=" text-gray-300">

@@ -10,7 +10,7 @@
             <label for="nom">Prenom</label>
             <input class="border-2 border-black p-0.5" type="text" name="prenom" id="prenom" placeholder="Votre Prenom" required>
         </div>
-
+        <!-- Inputs E-mail -->
         <div class="flex flex-col">
             <label for="nom">E-mail</label>
             <input class="border-2 border-black p-0.5" type="text" name="E-mail" id="E-mail" placeholder="Votre E-mail" required>
