@@ -35,7 +35,7 @@
         <script src="public\scripts\popover.js" defer></script>
     </head>
     <body>
-    <header class="flex flex-col w-full  sticky top-0 z-50 bg-white">
+    <header class="flex flex-col w-dvw  sticky top-0 z-50 bg-white">
         <p class="flex items-center justify-center oswald bg-amber-400">/!\ SITE FACTIF /!\</p>
         <p class="flex items-center justify-center oswald bg-black text-white">FRAIS DE PORT OFFERT DES 80€</p>
         <nav class="flex flex-row justify-between items-center px-4">
