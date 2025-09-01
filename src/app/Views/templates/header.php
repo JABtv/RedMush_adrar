@@ -35,7 +35,7 @@
         <script src="public\scripts\popover.js" defer></script>
     </head>
     <body>
-    <header class="flex flex-col w-dvw  sticky top-0 z-50 bg-white">
+    <header class="flex flex-col w-dvw  sticky top-0 z-50 bg-white shadow">
         <p class="flex items-center justify-center oswald bg-amber-400">/!\ SITE FACTIF /!\</p>
         <p class="flex items-center justify-center oswald bg-black text-white">FRAIS DE PORT OFFERT DES 80€</p>
         <nav class="flex flex-row justify-between items-center px-4">
@@ -80,7 +80,7 @@
             
                 <a href="./" class="flex items-center gap-2">
                     <img src="public\assets\images\logoL.png" alt="Logo du site">
-                    <h1 class="oswald-bold text-2xl">RedMush</h1>
+                    <h1 class="oswald-bold text-2xl hidden lg:flex">RedMush</h1>
                 </a>
             
             <section  class="flex gap-4">

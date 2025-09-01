@@ -1,4 +1,4 @@
-<main class="flex items-center justify-center bg-[#f0f0f0] min-h-screen">
+<main class="flex items-center justify-center my-6 bg-[#f0f0f0] py-33">
     <form action="#" method="post" class="flex flex-col justify-center w-full lg:w-1/2 gap-4 p-6 bg-white shadow">
         <!-- Inputs E-mail -->
         <div class="flex flex-col">

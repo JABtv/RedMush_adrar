@@ -12,11 +12,11 @@ $router->map( 'GET', '/', function() {
 	include __DIR__ . '/../src/app/Controllers/controller_accueil.php';
 });
 
-$router->map( 'GET', '/connexion', function() {
+$router->map( 'GET/POST', '/connexion', function() {
 	include __DIR__ . '/../src/app/Controllers/controller_connexion.php';
 });
 
-$router->map( 'GET', '/inscription', function() {
+$router->map( 'GET/POST', '/inscription', function() {
 	include __DIR__ . '/../src/app/Controllers/controller_inscription.php';
 });
 

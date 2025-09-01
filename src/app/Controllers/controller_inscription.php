@@ -1,4 +1,5 @@
 <?php
-
-require_once __DIR__ . '/../Models/auths/model_inscription.php';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+	require_once __DIR__ . '/../Models/auths/model_inscription.php';
+}
 require_once __DIR__ . '/../Views/auths/inscription.php';
