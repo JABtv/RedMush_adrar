@@ -57,8 +57,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'code_postal' => $code_postal
         ]);
         if ($success) {
-            // Inscription réussie, on peut rediriger ou afficher un message dans la vue
-            header('Location: ../../../../'); exit;
+            $_POST['success'] = true;
+            unset($_SESSION['errors']);
         } else {
             $errors['global'] = "Erreur lors de l'inscription";
             $_SESSION['errors'] = $errors;
