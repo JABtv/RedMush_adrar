@@ -1,5 +1,5 @@
         <!-- Footer Mobile -->
-        <footer class="bg-black text-white bottom-0 w-dvw lg:hidden pb-2">
+        <footer class="bg-black text-white bottom-0 w-dvw lg:hidden pb-2 shadow">
             <nav class="items-center text-left text-2xl">
                 <ul class="flex flex-col gap-2 w-full">
                     <hr class=" text-gray-300">
@@ -94,7 +94,7 @@
         </footer>
 
         <!-- Footer Desktop -->
-        <footer class="hidden lg:flex w-dvw flex-col bottom-0 border border-black">
+        <footer class="hidden lg:flex flex-col justify-end w-full bottom-0 shadow z-49">
             <nav class="flex w-full justify-center items-center p-4 text-2xl bg-white ">
                 <ul class="flex justify-between gap-2 w-full">
                     <li>

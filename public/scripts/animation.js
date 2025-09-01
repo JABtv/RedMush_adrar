@@ -10,24 +10,15 @@ document.addEventListener('DOMContentLoaded', function() {
         checkGray.style.strokeDashoffset = 24;
 
         fermerBtn.addEventListener('mouseenter', function() {
-            // Démarre l'animation immédiatement
+            // Animation une seule fois
             checkGreen.style.strokeDashoffset = 24;
             checkGray.style.strokeDashoffset = 10;
             setTimeout(() => {
                 checkGreen.style.strokeDashoffset = 10;
                 checkGray.style.strokeDashoffset = 24;
             }, 500);
-            interval = setInterval(() => {
-                checkGreen.style.strokeDashoffset = 24;
-                checkGray.style.strokeDashoffset = 10;
-                setTimeout(() => {
-                    checkGreen.style.strokeDashoffset = 10;
-                    checkGray.style.strokeDashoffset = 24;
-                }, 500);
-            }, 1000);
         });
         fermerBtn.addEventListener('mouseleave', function() {
-            clearInterval(interval);
             checkGreen.style.strokeDashoffset = 10;
             checkGray.style.strokeDashoffset = 24;
         });
