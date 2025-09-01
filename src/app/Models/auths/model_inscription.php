@@ -23,6 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $adresse = sanitize($_POST['adresse'] ?? '');
     $ville = sanitize($_POST['ville'] ?? '');
     $code_postal = sanitize($_POST['code_postal'] ?? '');
+    $pays = sanitize($_POST['pays'] ?? '');
+    $telephone = sanitize($_POST['telephone'] ?? '');
 
     if (empty($name_user)) $errors['name_user'] = "Nom obligatoire";
     if (empty($first_name_user)) $errors['first_name_user'] = "Prénom obligatoire";
@@ -32,6 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($adresse)) $errors['adresse'] = "Adresse obligatoire";
     if (empty($ville)) $errors['ville'] = "Ville obligatoire";
     if (empty($code_postal)) $errors['code_postal'] = "Code postal obligatoire";
+    if (empty($pays)) $errors['pays'] = "Pays obligatoire";
+    if (empty($telephone)) $errors['telephone'] = "Téléphone obligatoire";
 
     // Vérification doublon login_user
     $check = $db->prepare("SELECT COUNT(*) FROM users WHERE login_user = ?");
@@ -53,20 +57,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'code_postal' => $code_postal
         ]);
         if ($success) {
-            header('Location: ../../../..');
-            exit;
+            // Inscription réussie, on peut rediriger ou afficher un message dans la vue
+            header('Location: ../../../../'); exit;
         } else {
             $errors['global'] = "Erreur lors de l'inscription";
             $_SESSION['errors'] = $errors;
-            header('Location: ../../../../inscription');
-            exit;
         }
     } else {
         $_SESSION['errors'] = $errors;
-        header('Location: ../../../../inscription');
-        exit;
     }
-} else {
-    // Si aucune requête POST, on vide les erreurs
-    unset($_SESSION['errors']);
 }
