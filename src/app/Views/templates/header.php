@@ -80,7 +80,7 @@
             
                 <a href="./" class="flex items-center gap-2">
                     <img src="public\assets\images\logoL.png" alt="Logo du site">
-                    <h1 class="oswald-bold text-2xl">RedMush</h1>
+                    <h1 class="oswald-bold text-2xl hidden lg:flex">RedMush</h1>
                 </a>
             
             <section  class="flex gap-4">
