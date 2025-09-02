@@ -12,6 +12,11 @@ $router->map( 'GET', '/', function() {
 	include __DIR__ . '/../src/app/Controllers/controller_accueil.php';
 });
 
+// déconnexion
+$router->map( 'POST', '/deconnexion', function() {
+	include __DIR__ . '/../src/app/Controllers/controller_deconnexion.php';
+});
+
 $router->map( 'GET/POST', '/connexion', function() {
 	include __DIR__ . '/../src/app/Controllers/controller_connexion.php';
 });
@@ -52,6 +57,10 @@ $router->map( 'GET', '/faq', function() {
 	include __DIR__ . '/../src/app/Controllers/controller_faq.php';
 });
 
+$router->map( 'GET', '/condition', function() {
+	include __DIR__ . '/../src/app/Controllers/controller_condition.php';
+});
+
 $router->map( 'GET', '/contacte', function() {
 	include __DIR__ . '/../src/app/Controllers/controller_contacte.php';
 });
@@ -72,9 +81,6 @@ $router->map( 'GET', '/user/[i:id]/', function( $id ) {
 // match current request url
 $match = $router->match();
 
-if ($match !== null){
-	require_once __DIR__ . '/../src/app/Views/templates/header.php';
-
 	// call closure or throw 404 status
 	if( is_array($match) && is_callable( $match['target'] ) ) {
 		call_user_func_array( $match['target'], $match['params'] );
@@ -82,5 +88,3 @@ if ($match !== null){
 	// no route was matched
 	require_once __DIR__ . '/../src/app/Views/error/404.php';
 	}
-	require_once __DIR__ . '/../src/app/Views/templates/footer.php';
-}

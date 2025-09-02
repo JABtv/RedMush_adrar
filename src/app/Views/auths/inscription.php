@@ -1,5 +1,5 @@
 
-<main class="flex items-center justify-center my-6 bg-[#f0f0f0]">
+<main class="flex items-center justify-center my-6 bg-[#f0f0f0] noto-sans">
     <form action="/redmush/inscription" method="post" class="flex flex-col justify-center w-full lg:w-1/2 gap-4 p-6 bg-white shadow">
         <?php $errors = $_SESSION['errors'] ?? []; ?>
     <!-- Inputs Nom -->
@@ -148,8 +148,15 @@
             </div>
         </div>
 
-        <div>
-            <label for=""></label>
+        <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <input type="checkbox" name="condition" id="condition">
+                <label for="condition">J'accepte le <a href="./condition" class="text-blue-700 underline">condition d'utilisation</a></label>
+            </div>
+
+            <div>
+                <a href="./connexion" "> Déjà un compte ? <span class="text-blue-700 underline">Se connecter</span></span> </a>
+            </div>
         </div>
 
         <?php if (!empty($errors['global'])): ?>
